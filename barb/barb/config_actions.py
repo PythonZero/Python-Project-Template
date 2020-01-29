@@ -296,7 +296,7 @@ def _load_yaml(path: str) -> Dict[str, Any]:
 
     with open(path) as f:
         out_dict = yaml.load(f, Loader=yaml.FullLoader)
-    return out_dict
+    return out_dict if out_dict else dict()
 
 
 
