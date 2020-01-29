@@ -1,0 +1,8 @@
+{
+    "PLATFORM_KEY_COLUMNS": {
+        "test_platform": {
+            "dttm_col": "recorded_dttm",
+            "unique_together": ["name", "points"]
+        }
+    }
+}
