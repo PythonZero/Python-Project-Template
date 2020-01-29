@@ -1,11 +1,8 @@
-from barb import ConfigValues
+from barb import load_config, start_logging, ErrorManager
 
-ConfigValues.load("config/prod.yaml")
-ConfigValues.load("config/prod.json")
+if __name__ == "__main__":
+    load_config()
+    start_logging()
 
-print(ConfigValues.xyz)
-print(ConfigValues.Name)
-print(ConfigValues.Role)
-
-
-cyz = ConfigValues.CYZ
+    run() # your code goes here
+    ErrorManager.raise_first()
